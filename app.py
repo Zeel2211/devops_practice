@@ -12,6 +12,7 @@ def main():
         time.sleep(1)
 
     print("Done! Pipeline is working successfully.")
+    print("Testing the build")
 
 if __name__ == "__main__":
     main()
