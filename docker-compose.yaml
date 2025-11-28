@@ -1,9 +1,7 @@
 version: "3.8"
 services:
   web:
-    build:
-      context: ./app
-      dockerfile: Dockerfile
+    build: ./app
     container_name: flask-feedback-app
     ports:
       - "5000:5000"
@@ -11,7 +9,7 @@ services:
       - PORT=5000
       - DB_PATH=/data/feedback.db
     volumes:
-      - ./app:/app:delegated     # app code bind mount for dev (optional)
+      - ./app:/app:delegated
       - feedback-data:/data
     restart: unless-stopped
 
