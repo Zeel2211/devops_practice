@@ -1,0 +1,43 @@
+<!-- app/templates/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Feedback App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Feedback</h1>
+
+    <form id="feedback-form">
+      <label>
+        Name
+        <input type="text" id="name" name="name" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" id="email" name="email" />
+      </label>
+
+      <label>
+        Message
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </label>
+
+      <button type="submit">Send Feedback</button>
+    </form>
+
+    <section>
+      <h2>Previous feedback</h2>
+      <div id="feedback-list">
+        <p class="muted">Loading...</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

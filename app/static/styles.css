@@ -1,0 +1,80 @@
+/* app/static/styles.css */
+:root {
+  --max-w: 760px;
+  --accent: #0b63d4;
+  --muted: #666;
+  --card-bg: #fff;
+  --bg: #f5f6fb;
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+  padding: 24px;
+  background: var(--bg);
+  color: #111;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+}
+
+h1 { margin-top: 0; }
+form {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #222;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e6e9ef;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(16,24,40,0.04);
+}
+
+.meta {
+  display:flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.message { margin: 8px 0; white-space: pre-wrap; }
+.muted { color: var(--muted); }
+.error { color: #c53030; }
+.email { font-size: 13px; color: var(--muted); }
